@@ -19,15 +19,7 @@ namespace SaveVita
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //Hi Jona!
-            //hi zuruck garbriltiltul
-            //versuch nummer 2
-            //wenn es h´jetzt funktioniert haben wir es!
-            //es geht!
-            //wirklich
-            //shalalalala
-            //shingshong
-            //probieren
-            }
+            
+        }
     }
 }
