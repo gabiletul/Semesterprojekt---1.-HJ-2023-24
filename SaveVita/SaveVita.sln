@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaveVita", "SaveVita\SaveVita.csproj", "{91D4BC59-1E64-43D6-AAEE-FE1CFC156794}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91D4BC59-1E64-43D6-AAEE-FE1CFC156794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91D4BC59-1E64-43D6-AAEE-FE1CFC156794}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91D4BC59-1E64-43D6-AAEE-FE1CFC156794}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91D4BC59-1E64-43D6-AAEE-FE1CFC156794}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {64873611-1170-4674-A298-DECBFD7A2F64}
+	EndGlobalSection
+EndGlobal
