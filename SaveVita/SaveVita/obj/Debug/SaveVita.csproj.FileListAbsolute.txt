@@ -1,0 +1,12 @@
+C:\Users\gabiu\gitclone\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\bin\Debug\SaveVita.exe.config
+C:\Users\gabiu\gitclone\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\bin\Debug\SaveVita.exe
+C:\Users\gabiu\gitclone\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\bin\Debug\SaveVita.pdb
+C:\Users\gabiu\gitclone\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.csproj.AssemblyReference.cache
+C:\Users\gabiu\gitclone\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.csproj.SuggestedBindingRedirects.cache
+C:\Users\gabiu\gitclone\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.frm_main.resources
+C:\Users\gabiu\gitclone\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.frm_neu.resources
+C:\Users\gabiu\gitclone\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.Properties.Resources.resources
+C:\Users\gabiu\gitclone\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.csproj.GenerateResource.cache
+C:\Users\gabiu\gitclone\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.csproj.CoreCompileInputs.cache
+C:\Users\gabiu\gitclone\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.exe
+C:\Users\gabiu\gitclone\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.pdb
