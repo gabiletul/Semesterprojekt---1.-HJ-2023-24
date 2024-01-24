@@ -21,5 +21,26 @@ namespace SaveVita
         {
             
         }
+        int time = 8;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+           
+
+                pictureBox1.Image = Properties.Resources.SaveVita_Logo;
+            timer2.Start();
+             
+        }
+        
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            pictureBox1.Hide();
+            btn_register.Enabled = true;
+            btn_register.Show();
+        }
+
+        private void btn_register_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

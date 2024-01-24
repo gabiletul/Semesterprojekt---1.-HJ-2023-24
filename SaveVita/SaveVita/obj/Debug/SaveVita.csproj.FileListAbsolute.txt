@@ -10,3 +10,14 @@ C:\Users\gabiu\gitclone\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\De
 C:\Users\gabiu\gitclone\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.csproj.CoreCompileInputs.cache
 C:\Users\gabiu\gitclone\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.exe
 C:\Users\gabiu\gitclone\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.pdb
+C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\bin\Debug\SaveVita.exe.config
+C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\bin\Debug\SaveVita.exe
+C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\bin\Debug\SaveVita.pdb
+C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.csproj.AssemblyReference.cache
+C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.frm_main.resources
+C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.frm_neu.resources
+C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.Properties.Resources.resources
+C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.csproj.GenerateResource.cache
+C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.csproj.CoreCompileInputs.cache
+C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.exe
+C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.pdb
