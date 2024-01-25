@@ -46,7 +46,7 @@ namespace SaveVita
 
         private void btn_anywhere_Click(object sender, EventArgs e)
         {
-            if (//Account bereits existiert)
+            if ()//Account bereits existiert)
             {
                 btn_mahlzeit.Show();
                 btn_profil.Show();
