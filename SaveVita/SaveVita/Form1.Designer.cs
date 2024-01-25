@@ -90,7 +90,7 @@
             this.btn_profil.Name = "btn_profil";
             this.btn_profil.Size = new System.Drawing.Size(961, 155);
             this.btn_profil.TabIndex = 3;
-            this.btn_profil.Text = "Profil anzeigen";
+            this.btn_profil.Text = "Show profile";
             this.btn_profil.UseVisualStyleBackColor = true;
             this.btn_profil.Visible = false;
             // 
@@ -103,7 +103,7 @@
             this.btn_mahlzeit.Name = "btn_mahlzeit";
             this.btn_mahlzeit.Size = new System.Drawing.Size(961, 155);
             this.btn_mahlzeit.TabIndex = 4;
-            this.btn_mahlzeit.Text = "Mahlzeit eintragen";
+            this.btn_mahlzeit.Text = "Register meal";
             this.btn_mahlzeit.UseVisualStyleBackColor = true;
             this.btn_mahlzeit.Visible = false;
             // 
@@ -121,7 +121,7 @@
             // 
             // frm_main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 44F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;

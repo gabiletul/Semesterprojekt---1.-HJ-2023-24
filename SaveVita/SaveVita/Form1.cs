@@ -46,10 +46,13 @@ namespace SaveVita
 
         private void btn_anywhere_Click(object sender, EventArgs e)
         {
-            btn_mahlzeit.Show();
-            btn_profil.Show();
-            btn_anywhere.Hide();  
-            pbx_logo.Show();
+            if (//Account bereits existiert)
+            {
+                btn_mahlzeit.Show();
+                btn_profil.Show();
+                btn_anywhere.Hide();
+                pbx_logo.Show();
+            }
         }
     }
 }
