@@ -95,5 +95,17 @@
   <ItemGroup>
     <None Include="Resources\load.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Continue_text5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Continue_text5%281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Continue_text5%281%291.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Continue_gif.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
