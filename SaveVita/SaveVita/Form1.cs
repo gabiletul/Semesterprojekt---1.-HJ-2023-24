@@ -57,7 +57,12 @@ namespace SaveVita
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            btn_mahlzeit.Show();
+            btn_profil.Show();
+            btn_menu.Hide();
+            pbx_logo.Show();
+            gbx_profile.Hide();
+            gbx_new.Hide();
         }
 
         private void btn_profil_Click(object sender, EventArgs e)
@@ -66,6 +71,56 @@ namespace SaveVita
             btn_profil.Visible=false;
             btn_menu.Show();
             pbx_logo.Visible=false;
+            gbx_profile.Visible=true;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_mahlzeit_Click(object sender, EventArgs e)
+        {
+            btn_mahlzeit.Visible = false;
+            btn_profil.Visible = false;
+            btn_menu.Show();
+            pbx_logo.Visible = false;
+            gbx_new.Show();
+        }
+
+        private void gbx_new_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void num_kj_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_foodt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_carbonhydrate_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
