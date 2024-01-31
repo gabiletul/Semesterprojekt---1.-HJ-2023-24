@@ -107,5 +107,11 @@
   <ItemGroup>
     <None Include="Resources\Continue_gif.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\umriss-frau.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\umriss-mann.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
