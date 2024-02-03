@@ -83,7 +83,6 @@ namespace SaveVita
         {
             btn_mahlzeit.Visible = false;
             btn_profil.Visible = false;
-            btn_menu.Show();
             pbx_logo.Visible = false;
             gbx_new.Show();
         }
@@ -120,6 +119,25 @@ namespace SaveVita
 
         private void lbl_carbonhydrate_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            btn_mahlzeit.Show();
+            btn_profil.Show();
+            btn_menu.Hide();
+            pbx_logo.Show();
+            gbx_new.Hide();
+        }
+
+        private void btn_confirmfood_Click(object sender, EventArgs e)
+        {
+            btn_mahlzeit.Show();
+            btn_profil.Show();
+            btn_menu.Hide();
+            pbx_logo.Show();
+            gbx_new.Hide();
 
         }
     }
