@@ -139,6 +139,11 @@ namespace SaveVita
             pbx_logo.Show();
             gbx_new.Hide();
 
+            string decriptionname;
+            double kj;
+            double carbohydrates;
+            
+
         }
     }
 }

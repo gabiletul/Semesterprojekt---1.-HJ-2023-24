@@ -50,14 +50,14 @@
             this.btn_anywhere = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbx_new = new System.Windows.Forms.GroupBox();
+            this.btn_cancel = new System.Windows.Forms.Button();
+            this.btn_confirmfood = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.lbl_carbonhydrate = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.num_kj = new System.Windows.Forms.NumericUpDown();
             this.lbl_foodt = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btn_confirmfood = new System.Windows.Forms.Button();
-            this.btn_cancel = new System.Windows.Forms.Button();
             this.gbx_profile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_pp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
@@ -300,6 +300,32 @@
             this.gbx_new.Text = "New Meal";
             this.gbx_new.Visible = false;
             // 
+            // btn_cancel
+            // 
+            this.btn_cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btn_cancel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_cancel.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancel.Location = new System.Drawing.Point(3, 680);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(382, 68);
+            this.btn_cancel.TabIndex = 7;
+            this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.UseVisualStyleBackColor = true;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            // 
+            // btn_confirmfood
+            // 
+            this.btn_confirmfood.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btn_confirmfood.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_confirmfood.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_confirmfood.Location = new System.Drawing.Point(3, 748);
+            this.btn_confirmfood.Name = "btn_confirmfood";
+            this.btn_confirmfood.Size = new System.Drawing.Size(382, 68);
+            this.btn_confirmfood.TabIndex = 6;
+            this.btn_confirmfood.Text = "Confirm";
+            this.btn_confirmfood.UseVisualStyleBackColor = true;
+            this.btn_confirmfood.Click += new System.EventHandler(this.btn_confirmfood_Click);
+            // 
             // numericUpDown1
             // 
             this.numericUpDown1.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -359,9 +385,9 @@
             this.lbl_foodt.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_foodt.Location = new System.Drawing.Point(53, 104);
             this.lbl_foodt.Name = "lbl_foodt";
-            this.lbl_foodt.Size = new System.Drawing.Size(97, 51);
+            this.lbl_foodt.Size = new System.Drawing.Size(260, 51);
             this.lbl_foodt.TabIndex = 1;
-            this.lbl_foodt.Text = "food:";
+            this.lbl_foodt.Text = "description name:";
             // 
             // textBox1
             // 
@@ -371,32 +397,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(169, 58);
             this.textBox1.TabIndex = 0;
-            // 
-            // btn_confirmfood
-            // 
-            this.btn_confirmfood.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btn_confirmfood.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btn_confirmfood.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_confirmfood.Location = new System.Drawing.Point(3, 748);
-            this.btn_confirmfood.Name = "btn_confirmfood";
-            this.btn_confirmfood.Size = new System.Drawing.Size(382, 68);
-            this.btn_confirmfood.TabIndex = 6;
-            this.btn_confirmfood.Text = "Confirm";
-            this.btn_confirmfood.UseVisualStyleBackColor = true;
-            this.btn_confirmfood.Click += new System.EventHandler(this.btn_confirmfood_Click);
-            // 
-            // btn_cancel
-            // 
-            this.btn_cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_cancel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btn_cancel.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(3, 680);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(382, 68);
-            this.btn_cancel.TabIndex = 7;
-            this.btn_cancel.Text = "Cancel";
-            this.btn_cancel.UseVisualStyleBackColor = true;
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // frm_main
             // 
