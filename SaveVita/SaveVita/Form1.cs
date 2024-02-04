@@ -91,9 +91,9 @@ namespace SaveVita
             }
             else if(line == null)
             {
-                
-                //Register.ShowDialog();
-                //if(Register.DialogResult == DialogResult.OK)
+                frm_register register = new frm_register();
+                register.ShowDialog();
+                if(register.DialogResult == DialogResult.OK)
                 {
 
                 }

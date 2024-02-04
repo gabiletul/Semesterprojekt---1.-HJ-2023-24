@@ -15,7 +15,6 @@ C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\bin\Debug\SaveVi
 C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\bin\Debug\SaveVita.pdb
 C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.csproj.AssemblyReference.cache
 C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.frm_main.resources
-C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.frm_neu.resources
 C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.Properties.Resources.resources
 C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.csproj.GenerateResource.cache
 C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.csproj.CoreCompileInputs.cache
@@ -27,3 +26,4 @@ C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\bin\Debug\System
 C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\bin\Debug\System.Numerics.Vectors.dll
 C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\bin\Debug\System.Buffers.dll
 C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.csproj.CopyComplete
+C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.frm_register.resources
