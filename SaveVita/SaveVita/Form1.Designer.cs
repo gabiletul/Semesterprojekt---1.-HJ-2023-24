@@ -52,18 +52,18 @@
             this.gbx_new = new System.Windows.Forms.GroupBox();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_confirmfood = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.num_carbohydrates = new System.Windows.Forms.NumericUpDown();
             this.lbl_carbonhydrate = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.num_kj = new System.Windows.Forms.NumericUpDown();
             this.lbl_foodt = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_description = new System.Windows.Forms.TextBox();
             this.gbx_profile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_pp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbx_new.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_carbohydrates)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_kj)).BeginInit();
             this.SuspendLayout();
             // 
@@ -286,12 +286,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbx_new.Controls.Add(this.btn_cancel);
             this.gbx_new.Controls.Add(this.btn_confirmfood);
-            this.gbx_new.Controls.Add(this.numericUpDown1);
+            this.gbx_new.Controls.Add(this.num_carbohydrates);
             this.gbx_new.Controls.Add(this.lbl_carbonhydrate);
             this.gbx_new.Controls.Add(this.label1);
             this.gbx_new.Controls.Add(this.num_kj);
             this.gbx_new.Controls.Add(this.lbl_foodt);
-            this.gbx_new.Controls.Add(this.textBox1);
+            this.gbx_new.Controls.Add(this.txt_description);
             this.gbx_new.Location = new System.Drawing.Point(310, 1);
             this.gbx_new.Name = "gbx_new";
             this.gbx_new.Size = new System.Drawing.Size(388, 819);
@@ -326,20 +326,20 @@
             this.btn_confirmfood.UseVisualStyleBackColor = true;
             this.btn_confirmfood.Click += new System.EventHandler(this.btn_confirmfood_Click);
             // 
-            // numericUpDown1
+            // num_carbohydrates
             // 
-            this.numericUpDown1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.numericUpDown1.DecimalPlaces = 2;
-            this.numericUpDown1.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(163, 272);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.num_carbohydrates.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.num_carbohydrates.DecimalPlaces = 2;
+            this.num_carbohydrates.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.num_carbohydrates.Location = new System.Drawing.Point(163, 272);
+            this.num_carbohydrates.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(169, 58);
-            this.numericUpDown1.TabIndex = 5;
+            this.num_carbohydrates.Name = "num_carbohydrates";
+            this.num_carbohydrates.Size = new System.Drawing.Size(169, 58);
+            this.num_carbohydrates.TabIndex = 5;
             // 
             // lbl_carbonhydrate
             // 
@@ -389,14 +389,14 @@
             this.lbl_foodt.TabIndex = 1;
             this.lbl_foodt.Text = "description name:";
             // 
-            // textBox1
+            // txt_description
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textBox1.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(163, 104);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(169, 58);
-            this.textBox1.TabIndex = 0;
+            this.txt_description.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txt_description.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_description.Location = new System.Drawing.Point(163, 104);
+            this.txt_description.Name = "txt_description";
+            this.txt_description.Size = new System.Drawing.Size(169, 58);
+            this.txt_description.TabIndex = 0;
             // 
             // frm_main
             // 
@@ -434,7 +434,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gbx_new.ResumeLayout(false);
             this.gbx_new.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_carbohydrates)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_kj)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -463,12 +463,12 @@
         private System.Windows.Forms.Label lbl_age;
         private System.Windows.Forms.Label lbl_name;
         private System.Windows.Forms.GroupBox gbx_new;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown num_carbohydrates;
         private System.Windows.Forms.Label lbl_carbonhydrate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown num_kj;
         private System.Windows.Forms.Label lbl_foodt;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_description;
         private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.Button btn_confirmfood;
     }

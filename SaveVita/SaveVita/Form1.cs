@@ -3,23 +3,61 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using static System.Windows.Forms.LinkLabel;
 namespace SaveVita
 {
     public partial class frm_main : Form
     {
+        
         public frm_main()
         {
+
             InitializeComponent();
         }
-
+        string line;
+        int localid;
         private void Form1_Load(object sender, EventArgs e)
         {
             
+            List<cls_naehrwerte> nährwerteliste = new List<cls_naehrwerte>();
+            List<cls_User> userliste = new List<cls_User>();
+            DateTime gebdat = DateTime.Now;
+            cls_User User = new cls_User("Max", "Mustermann", "m", "max@muster.gmx.de", gebdat, Convert.ToInt32(DateTime.Now - gebdat), DateTime.Now);
+            DataProv.InsertData_U(User);
+            //cls_DataProv.InsertData_N(nährwerteliste);
+            
+            try
+            {
+                //Pass the file path and file name to the StreamReader constructor
+                StreamReader sr = new StreamReader("localid.txt");
+                //Read the first line of text
+                line = sr.ReadLine();
+                //Continue to read until you reach end of file
+                //while (line != null)
+                {
+                    //write the line to console window
+                    localid = Convert.ToInt32(line);
+                    
+                    
+                }
+                //close the file
+                sr.Close();
+                MessageBox.Show(Convert.ToString(localid));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception: " + ex.Message);
+            }
+            
+            
+
+
+
         }
         int time = 8;
         private void timer1_Tick(object sender, EventArgs e)
@@ -47,11 +85,21 @@ namespace SaveVita
         private void btn_anywhere_Click(object sender, EventArgs e)
         {
             //if ()Account bereits existiert)
+            if(line != null)
             {
                 btn_mahlzeit.Show();
                 btn_profil.Show();
                 btn_anywhere.Hide();
                 pbx_logo.Show();
+            }
+            else if(line == null)
+            {
+                frm_register Register = new frm_register();
+                Register.ShowDialog();
+                if(Register.DialogResult == DialogResult.OK)
+                {
+
+                }
             }
         }
 
@@ -139,9 +187,9 @@ namespace SaveVita
             pbx_logo.Show();
             gbx_new.Hide();
 
-            string decriptionname;
-            double kj;
-            double carbohydrates;
+            string decriptionname = txt_description.Text;
+            double kj = Convert.ToDouble(num_kj.Value);
+            double carbohydrates = Convert.ToDouble(num_carbohydrates.Value);
             
 
         }
