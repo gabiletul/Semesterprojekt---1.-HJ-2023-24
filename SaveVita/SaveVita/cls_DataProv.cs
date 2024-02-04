@@ -20,10 +20,16 @@ namespace SaveVita
         {
             MySqlConnection dbConn = new MySqlConnection(connectionString);
 
-            string query = string.Format("INSERT INTO tbl_userdaten (Vorname, Nachname, Geschlecht, E-Mail, Geburtsdatum, Alter, Registrierungsdatum) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}')", User.Vorname, User.Nachname, User.Geschlecht, User.Email, User.Gebdat, User.Alter, User.Registrierungsdatum);
-            MySqlCommand commandDatabase = new MySqlCommand(query, dbConn);
+            string query = string.Format("INSERT INTO tbl_userdaten (Vorname, Nachname, Geschlecht, E-Mail, Geburtsdatum, Alter, Registrierungsdatum) VALUES (@vorname, @nachname, @geschlecht, @email, @geburtsdatum, @age, @regdatum)");//('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}')", User.Vorname, User.Nachname, User.Geschlecht, User.Email, User.Gebdat, User.Alter, User.Registrierungsdatum);
 
-            commandDatabase.CommandTimeout = 30;
+            MySqlCommand commandDatabase = new MySqlCommand(query, dbConn);
+            commandDatabase.Parameters.Add("@vorname", MySqlDbType.String).Value = User.Vorname;
+            commandDatabase.Parameters.Add("@nachname", MySqlDbType.String).Value = User.Nachname;
+            commandDatabase.Parameters.Add("@nachname", MySqlDbType.String).Value = User.Nachname;
+            commandDatabase.Parameters.Add("@nachname", MySqlDbType.String).Value = User.Nachname;
+            commandDatabase.Parameters.Add("@nachname", MySqlDbType.String).Value = User.Nachname;
+            commandDatabase.Parameters.Add("@nachname", MySqlDbType.String).Value = User.Nachname;
+            commandDatabase.CommandTimeout = 200;
 
             try
             {
@@ -52,6 +58,38 @@ namespace SaveVita
                 dbConn.Open(); //Verbindung DB
 
                 commandDatabase.ExecuteNonQuery();
+
+                dbConn.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Fehler bei der Datenbankverbindung!");
+            }
+        }
+        public static void Select_ID(cls_User User)
+        {
+
+            MySqlConnection dbConn = new MySqlConnection(connectionString);
+
+            string query = string.Format("SELECT FROM tbl_userdaten (id) WHERE Vorname = @vorname AND Nachname = @nachname AND E-Mail = @email");
+
+            MySqlCommand commandDatabase = new MySqlCommand(query, dbConn);
+            commandDatabase.Parameters.Add("@vorname", MySqlDbType.String).Value = User.Vorname;
+            commandDatabase.Parameters.Add("@nachname", MySqlDbType.String).Value = User.Nachname;
+            commandDatabase.Parameters.Add("@email", MySqlDbType.String).Value = User.Email;
+
+            commandDatabase.CommandTimeout = 30;
+
+            try
+            {
+                dbConn.Open(); //Verbindung DB
+
+                
+                MySqlDataReader reader = commandDatabase.ExecuteReader();
+                while (reader.Read())
+                {
+                    User.ID = reader.GetInt32(0);
+                }
 
                 dbConn.Close();
             }

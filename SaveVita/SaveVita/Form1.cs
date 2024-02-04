@@ -44,7 +44,7 @@ namespace SaveVita
                 }
                 //close the file
                 sr.Close();
-                MessageBox.Show(Convert.ToString(localid));
+                
             }
             catch (Exception ex)
             {
