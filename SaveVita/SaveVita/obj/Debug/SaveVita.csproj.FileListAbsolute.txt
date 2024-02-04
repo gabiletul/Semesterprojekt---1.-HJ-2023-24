@@ -21,7 +21,6 @@ C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVi
 C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.csproj.CoreCompileInputs.cache
 C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.exe
 C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.pdb
-C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\obj\Debug\SaveVita.frm_register.resources
 C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\bin\Debug\MySql.Data.DLL
 C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\bin\Debug\System.Memory.dll
 C:\Schule\APR\Semesterprojekt---1.-HJ-2023-24\SaveVita\SaveVita\bin\Debug\System.Threading.Tasks.Extensions.dll

@@ -23,14 +23,11 @@ namespace SaveVita
         int localid;
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
+
             List<cls_naehrwerte> nährwerteliste = new List<cls_naehrwerte>();
             List<cls_User> userliste = new List<cls_User>();
             DateTime gebdat = DateTime.Now;
-            cls_User User = new cls_User("Max", "Mustermann", "m", "max@muster.gmx.de", gebdat, Convert.ToInt32(DateTime.Now - gebdat), DateTime.Now);
-            DataProv.InsertData_U(User);
-            //cls_DataProv.InsertData_N(nährwerteliste);
-            
             try
             {
                 //Pass the file path and file name to the StreamReader constructor
@@ -94,9 +91,9 @@ namespace SaveVita
             }
             else if(line == null)
             {
-                frm_register Register = new frm_register();
-                Register.ShowDialog();
-                if(Register.DialogResult == DialogResult.OK)
+                
+                //Register.ShowDialog();
+                //if(Register.DialogResult == DialogResult.OK)
                 {
 
                 }

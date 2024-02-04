@@ -39,7 +39,5 @@ namespace SaveVita
             m_eiweiß = eiweiß;
             m_salz = salz;
         }
-
-
     }
 }
