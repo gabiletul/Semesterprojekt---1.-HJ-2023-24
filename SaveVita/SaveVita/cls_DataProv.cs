@@ -20,16 +20,18 @@ namespace SaveVita
         {
             MySqlConnection dbConn = new MySqlConnection(connectionString);
 
-            string query = string.Format("INSERT INTO tbl_userdaten (Vorname, Nachname, Geschlecht, E-Mail, Geburtsdatum, Alter, Registrierungsdatum) VALUES (@vorname, @nachname, @geschlecht, @email, @geburtsdatum, @age, @regdatum)");//('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}')", User.Vorname, User.Nachname, User.Geschlecht, User.Email, User.Gebdat, User.Alter, User.Registrierungsdatum);
+            string query = string.Format("INSERT INTO `tbl_userdaten`(`Vorname`, `Nachname`, `Geschlecht`, `EMail`, `Geburtsdatum`, `age`, `Registrierungsdatum`) VALUES ('j','w','m','em','2006-07-12','17','2024-02-05')unktion");//('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}')", User.Vorname, User.Nachname, User.Geschlecht, User.Email, User.Gebdat, User.Alter, User.Registrierungsdatum);
 
             MySqlCommand commandDatabase = new MySqlCommand(query, dbConn);
             commandDatabase.Parameters.Add("@vorname", MySqlDbType.String).Value = User.Vorname;
             commandDatabase.Parameters.Add("@nachname", MySqlDbType.String).Value = User.Nachname;
-            commandDatabase.Parameters.Add("@nachname", MySqlDbType.String).Value = User.Nachname;
-            commandDatabase.Parameters.Add("@nachname", MySqlDbType.String).Value = User.Nachname;
-            commandDatabase.Parameters.Add("@nachname", MySqlDbType.String).Value = User.Nachname;
-            commandDatabase.Parameters.Add("@nachname", MySqlDbType.String).Value = User.Nachname;
-            commandDatabase.CommandTimeout = 200;
+            commandDatabase.Parameters.Add("@geschlecht", MySqlDbType.String).Value = User.Geschlecht;
+            commandDatabase.Parameters.Add("@email", MySqlDbType.String).Value = User.Email;
+            commandDatabase.Parameters.Add("@geburtsdatum", MySqlDbType.DateTime).Value = User.Gebdat.Date;
+            commandDatabase.Parameters.Add("@age", MySqlDbType.Int64).Value = User.Alter;
+            commandDatabase.Parameters.Add("@regdatum", MySqlDbType.DateTime).Value = User.Registrierungsdatum.Date;
+            
+            //commandDatabase.CommandTimeout = 500;
 
             try
             {
