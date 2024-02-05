@@ -48,5 +48,9 @@ namespace SaveVita
             m_alter = alter;
             m_registrierungsdatum = registrierungsdatum;
         }
+        public cls_User(int id)
+        {
+            m_id = id;
+        }
     }
 }

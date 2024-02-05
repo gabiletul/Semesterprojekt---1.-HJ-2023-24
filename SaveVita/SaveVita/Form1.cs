@@ -20,7 +20,7 @@ namespace SaveVita
             InitializeComponent();
         }
         string line;
-        int localid;
+        int localid =0;
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -39,8 +39,21 @@ namespace SaveVita
                 {
                     //write the line to console window
                     localid = Convert.ToInt32(line);
-                    
-                    
+                    cls_User User = new cls_User(localid);
+                    User.ID = localid;
+                    if (line != null)
+                    {
+                        
+
+                        
+                        cls_DataProv.Select_U(User);
+
+                        lbl_age = Convert.ToString(User.Alter);
+                        lbl_name = Convert.ToString(User.Vorname + " " + User.Nachname);
+                        //lbl_height = Convert.ToString(User.Groeße)
+                        //lbl_weight = Convert.ToString(User.Gewicht)
+
+                    }
                 }
                 //close the file
                 sr.Close();
@@ -88,6 +101,19 @@ namespace SaveVita
                 btn_profil.Show();
                 btn_anywhere.Hide();
                 pbx_logo.Show();
+
+                cls_User User = new cls_User(localid);
+                cls_DataProv.Select_U(User);
+
+                string vorname;
+                string nachname;
+                string gender;
+                string email;
+                DateTime gebdat;
+                int age;
+                DateTime regdat;
+
+                
             }
             else if(line == null)
             {
@@ -117,6 +143,7 @@ namespace SaveVita
             btn_menu.Show();
             pbx_logo.Visible=false;
             gbx_profile.Visible=true;
+            
         }
 
         private void label3_Click(object sender, EventArgs e)

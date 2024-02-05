@@ -148,7 +148,7 @@
             this.lbl_weight.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_weight.Location = new System.Drawing.Point(494, 465);
             this.lbl_weight.Name = "lbl_weight";
-            this.lbl_weight.Size = new System.Drawing.Size(50, 51);
+            this.lbl_weight.Size = new System.Drawing.Size(98, 100);
             this.lbl_weight.TabIndex = 8;
             this.lbl_weight.Text = "....";
             this.lbl_weight.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -159,7 +159,7 @@
             this.lbl_height.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_height.Location = new System.Drawing.Point(494, 338);
             this.lbl_height.Name = "lbl_height";
-            this.lbl_height.Size = new System.Drawing.Size(50, 51);
+            this.lbl_height.Size = new System.Drawing.Size(98, 100);
             this.lbl_height.TabIndex = 7;
             this.lbl_height.Text = "....";
             this.lbl_height.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -170,7 +170,7 @@
             this.lbl_age.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_age.Location = new System.Drawing.Point(494, 213);
             this.lbl_age.Name = "lbl_age";
-            this.lbl_age.Size = new System.Drawing.Size(50, 51);
+            this.lbl_age.Size = new System.Drawing.Size(98, 100);
             this.lbl_age.TabIndex = 6;
             this.lbl_age.Text = "....";
             this.lbl_age.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -181,7 +181,7 @@
             this.lbl_name.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_name.Location = new System.Drawing.Point(494, 95);
             this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(50, 51);
+            this.lbl_name.Size = new System.Drawing.Size(98, 100);
             this.lbl_name.TabIndex = 5;
             this.lbl_name.Text = "....";
             this.lbl_name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -203,7 +203,7 @@
             this.lbl_weightt.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_weightt.Location = new System.Drawing.Point(79, 465);
             this.lbl_weightt.Name = "lbl_weightt";
-            this.lbl_weightt.Size = new System.Drawing.Size(118, 51);
+            this.lbl_weightt.Size = new System.Drawing.Size(230, 100);
             this.lbl_weightt.TabIndex = 3;
             this.lbl_weightt.Text = "weight:";
             // 
@@ -213,7 +213,7 @@
             this.lbl_heightt.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_heightt.Location = new System.Drawing.Point(79, 338);
             this.lbl_heightt.Name = "lbl_heightt";
-            this.lbl_heightt.Size = new System.Drawing.Size(115, 51);
+            this.lbl_heightt.Size = new System.Drawing.Size(223, 100);
             this.lbl_heightt.TabIndex = 2;
             this.lbl_heightt.Text = "height:";
             this.lbl_heightt.Click += new System.EventHandler(this.label3_Click);
@@ -224,7 +224,7 @@
             this.lbl_aget.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_aget.Location = new System.Drawing.Point(79, 213);
             this.lbl_aget.Name = "lbl_aget";
-            this.lbl_aget.Size = new System.Drawing.Size(77, 51);
+            this.lbl_aget.Size = new System.Drawing.Size(154, 100);
             this.lbl_aget.TabIndex = 1;
             this.lbl_aget.Text = "age:";
             // 
@@ -234,7 +234,7 @@
             this.lbl_namet.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_namet.Location = new System.Drawing.Point(79, 95);
             this.lbl_namet.Name = "lbl_namet";
-            this.lbl_namet.Size = new System.Drawing.Size(98, 51);
+            this.lbl_namet.Size = new System.Drawing.Size(196, 100);
             this.lbl_namet.TabIndex = 0;
             this.lbl_namet.Text = "name:";
             // 
@@ -338,7 +338,7 @@
             0,
             0});
             this.num_carbohydrates.Name = "num_carbohydrates";
-            this.num_carbohydrates.Size = new System.Drawing.Size(169, 58);
+            this.num_carbohydrates.Size = new System.Drawing.Size(169, 108);
             this.num_carbohydrates.TabIndex = 5;
             // 
             // lbl_carbonhydrate
@@ -348,7 +348,7 @@
             this.lbl_carbonhydrate.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_carbonhydrate.Location = new System.Drawing.Point(53, 279);
             this.lbl_carbonhydrate.Name = "lbl_carbonhydrate";
-            this.lbl_carbonhydrate.Size = new System.Drawing.Size(226, 51);
+            this.lbl_carbonhydrate.Size = new System.Drawing.Size(451, 100);
             this.lbl_carbonhydrate.TabIndex = 4;
             this.lbl_carbonhydrate.Text = "carbohydrates:";
             // 
@@ -359,7 +359,7 @@
             this.label1.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(53, 191);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 51);
+            this.label1.Size = new System.Drawing.Size(100, 100);
             this.label1.TabIndex = 3;
             this.label1.Text = "kj:";
             // 
@@ -375,7 +375,7 @@
             0,
             0});
             this.num_kj.Name = "num_kj";
-            this.num_kj.Size = new System.Drawing.Size(169, 58);
+            this.num_kj.Size = new System.Drawing.Size(169, 108);
             this.num_kj.TabIndex = 2;
             // 
             // lbl_foodt
@@ -385,7 +385,7 @@
             this.lbl_foodt.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_foodt.Location = new System.Drawing.Point(53, 104);
             this.lbl_foodt.Name = "lbl_foodt";
-            this.lbl_foodt.Size = new System.Drawing.Size(260, 51);
+            this.lbl_foodt.Size = new System.Drawing.Size(514, 100);
             this.lbl_foodt.TabIndex = 1;
             this.lbl_foodt.Text = "description name:";
             // 
@@ -395,21 +395,21 @@
             this.txt_description.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_description.Location = new System.Drawing.Point(163, 104);
             this.txt_description.Name = "txt_description";
-            this.txt_description.Size = new System.Drawing.Size(169, 58);
+            this.txt_description.Size = new System.Drawing.Size(169, 108);
             this.txt_description.TabIndex = 0;
             // 
             // frm_main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 44F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(961, 891);
+            this.Controls.Add(this.gbx_profile);
             this.Controls.Add(this.gbx_new);
             this.Controls.Add(this.btn_menu);
-            this.Controls.Add(this.gbx_profile);
             this.Controls.Add(this.pbx_logo);
             this.Controls.Add(this.btn_mahlzeit);
             this.Controls.Add(this.btn_profil);
