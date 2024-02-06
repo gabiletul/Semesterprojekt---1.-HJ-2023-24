@@ -58,6 +58,9 @@
             this.num_kj = new System.Windows.Forms.NumericUpDown();
             this.lbl_foodt = new System.Windows.Forms.Label();
             this.txt_description = new System.Windows.Forms.TextBox();
+            this.gbx_meallist = new System.Windows.Forms.GroupBox();
+            this.btn_reg = new System.Windows.Forms.Button();
+            this.lbx_meals = new System.Windows.Forms.ListBox();
             this.gbx_profile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_pp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logo)).BeginInit();
@@ -65,6 +68,7 @@
             this.gbx_new.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_carbohydrates)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_kj)).BeginInit();
+            this.gbx_meallist.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -85,7 +89,7 @@
             this.btn_profil.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_profil.Location = new System.Drawing.Point(0, 0);
             this.btn_profil.Name = "btn_profil";
-            this.btn_profil.Size = new System.Drawing.Size(961, 155);
+            this.btn_profil.Size = new System.Drawing.Size(961, 1161);
             this.btn_profil.TabIndex = 3;
             this.btn_profil.Text = "Show profile";
             this.btn_profil.UseVisualStyleBackColor = true;
@@ -97,11 +101,11 @@
             this.btn_mahlzeit.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_mahlzeit.Font = new System.Drawing.Font("Papyrus", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_mahlzeit.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_mahlzeit.Location = new System.Drawing.Point(0, 155);
+            this.btn_mahlzeit.Location = new System.Drawing.Point(0, 1161);
             this.btn_mahlzeit.Name = "btn_mahlzeit";
-            this.btn_mahlzeit.Size = new System.Drawing.Size(961, 155);
+            this.btn_mahlzeit.Size = new System.Drawing.Size(961, 1161);
             this.btn_mahlzeit.TabIndex = 4;
-            this.btn_mahlzeit.Text = "Register meal";
+            this.btn_mahlzeit.Text = "Show meals";
             this.btn_mahlzeit.UseVisualStyleBackColor = true;
             this.btn_mahlzeit.Visible = false;
             this.btn_mahlzeit.Click += new System.EventHandler(this.btn_mahlzeit_Click);
@@ -111,9 +115,9 @@
             this.btn_menu.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btn_menu.Font = new System.Drawing.Font("Papyrus", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_menu.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_menu.Location = new System.Drawing.Point(0, 736);
+            this.btn_menu.Location = new System.Drawing.Point(0, -270);
             this.btn_menu.Name = "btn_menu";
-            this.btn_menu.Size = new System.Drawing.Size(961, 155);
+            this.btn_menu.Size = new System.Drawing.Size(961, 1161);
             this.btn_menu.TabIndex = 6;
             this.btn_menu.Text = "Menu";
             this.btn_menu.UseVisualStyleBackColor = true;
@@ -125,18 +129,20 @@
             this.gbx_profile.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbx_profile.Controls.Add(this.gbx_meallist);
+            this.gbx_profile.Controls.Add(this.gbx_new);
             this.gbx_profile.Controls.Add(this.lbl_weight);
             this.gbx_profile.Controls.Add(this.lbl_height);
             this.gbx_profile.Controls.Add(this.lbl_age);
             this.gbx_profile.Controls.Add(this.lbl_name);
-            this.gbx_profile.Controls.Add(this.pbx_pp);
             this.gbx_profile.Controls.Add(this.lbl_weightt);
             this.gbx_profile.Controls.Add(this.lbl_heightt);
             this.gbx_profile.Controls.Add(this.lbl_aget);
             this.gbx_profile.Controls.Add(this.lbl_namet);
+            this.gbx_profile.Controls.Add(this.pbx_pp);
             this.gbx_profile.Location = new System.Drawing.Point(0, 0);
             this.gbx_profile.Name = "gbx_profile";
-            this.gbx_profile.Size = new System.Drawing.Size(961, 891);
+            this.gbx_profile.Size = new System.Drawing.Size(1153, 1069);
             this.gbx_profile.TabIndex = 7;
             this.gbx_profile.TabStop = false;
             this.gbx_profile.Text = "Profile information";
@@ -148,7 +154,7 @@
             this.lbl_weight.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_weight.Location = new System.Drawing.Point(494, 465);
             this.lbl_weight.Name = "lbl_weight";
-            this.lbl_weight.Size = new System.Drawing.Size(98, 100);
+            this.lbl_weight.Size = new System.Drawing.Size(63, 64);
             this.lbl_weight.TabIndex = 8;
             this.lbl_weight.Text = "....";
             this.lbl_weight.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -159,7 +165,7 @@
             this.lbl_height.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_height.Location = new System.Drawing.Point(494, 338);
             this.lbl_height.Name = "lbl_height";
-            this.lbl_height.Size = new System.Drawing.Size(98, 100);
+            this.lbl_height.Size = new System.Drawing.Size(63, 64);
             this.lbl_height.TabIndex = 7;
             this.lbl_height.Text = "....";
             this.lbl_height.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -170,7 +176,7 @@
             this.lbl_age.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_age.Location = new System.Drawing.Point(494, 213);
             this.lbl_age.Name = "lbl_age";
-            this.lbl_age.Size = new System.Drawing.Size(98, 100);
+            this.lbl_age.Size = new System.Drawing.Size(63, 64);
             this.lbl_age.TabIndex = 6;
             this.lbl_age.Text = "....";
             this.lbl_age.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -181,7 +187,7 @@
             this.lbl_name.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_name.Location = new System.Drawing.Point(494, 95);
             this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(98, 100);
+            this.lbl_name.Size = new System.Drawing.Size(63, 64);
             this.lbl_name.TabIndex = 5;
             this.lbl_name.Text = "....";
             this.lbl_name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -190,7 +196,7 @@
             // 
             this.pbx_pp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbx_pp.Image = global::SaveVita.Properties.Resources.umriss_mann;
-            this.pbx_pp.Location = new System.Drawing.Point(455, 38);
+            this.pbx_pp.Location = new System.Drawing.Point(647, 38);
             this.pbx_pp.Name = "pbx_pp";
             this.pbx_pp.Size = new System.Drawing.Size(479, 285);
             this.pbx_pp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -203,7 +209,7 @@
             this.lbl_weightt.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_weightt.Location = new System.Drawing.Point(79, 465);
             this.lbl_weightt.Name = "lbl_weightt";
-            this.lbl_weightt.Size = new System.Drawing.Size(230, 100);
+            this.lbl_weightt.Size = new System.Drawing.Size(145, 64);
             this.lbl_weightt.TabIndex = 3;
             this.lbl_weightt.Text = "weight:";
             // 
@@ -213,7 +219,7 @@
             this.lbl_heightt.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_heightt.Location = new System.Drawing.Point(79, 338);
             this.lbl_heightt.Name = "lbl_heightt";
-            this.lbl_heightt.Size = new System.Drawing.Size(223, 100);
+            this.lbl_heightt.Size = new System.Drawing.Size(140, 64);
             this.lbl_heightt.TabIndex = 2;
             this.lbl_heightt.Text = "height:";
             this.lbl_heightt.Click += new System.EventHandler(this.label3_Click);
@@ -224,7 +230,7 @@
             this.lbl_aget.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_aget.Location = new System.Drawing.Point(79, 213);
             this.lbl_aget.Name = "lbl_aget";
-            this.lbl_aget.Size = new System.Drawing.Size(154, 100);
+            this.lbl_aget.Size = new System.Drawing.Size(99, 64);
             this.lbl_aget.TabIndex = 1;
             this.lbl_aget.Text = "age:";
             // 
@@ -234,7 +240,7 @@
             this.lbl_namet.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_namet.Location = new System.Drawing.Point(79, 95);
             this.lbl_namet.Name = "lbl_namet";
-            this.lbl_namet.Size = new System.Drawing.Size(196, 100);
+            this.lbl_namet.Size = new System.Drawing.Size(122, 64);
             this.lbl_namet.TabIndex = 0;
             this.lbl_namet.Text = "name:";
             // 
@@ -242,7 +248,7 @@
             // 
             this.pbx_logo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pbx_logo.Image = global::SaveVita.Properties.Resources.SaveVita_Logo;
-            this.pbx_logo.Location = new System.Drawing.Point(722, 735);
+            this.pbx_logo.Location = new System.Drawing.Point(854, 874);
             this.pbx_logo.Name = "pbx_logo";
             this.pbx_logo.Size = new System.Drawing.Size(239, 130);
             this.pbx_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -257,9 +263,9 @@
             this.btn_anywhere.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_anywhere.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_anywhere.Image = global::SaveVita.Properties.Resources.Continue_gif;
-            this.btn_anywhere.Location = new System.Drawing.Point(0, 0);
+            this.btn_anywhere.Location = new System.Drawing.Point(0, 2322);
             this.btn_anywhere.Name = "btn_anywhere";
-            this.btn_anywhere.Size = new System.Drawing.Size(961, 891);
+            this.btn_anywhere.Size = new System.Drawing.Size(961, 0);
             this.btn_anywhere.TabIndex = 2;
             this.btn_anywhere.UseVisualStyleBackColor = false;
             this.btn_anywhere.Visible = false;
@@ -272,9 +278,9 @@
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::SaveVita.Properties.Resources.load;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 2322);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(961, 891);
+            this.pictureBox1.Size = new System.Drawing.Size(961, 0);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -292,9 +298,9 @@
             this.gbx_new.Controls.Add(this.num_kj);
             this.gbx_new.Controls.Add(this.lbl_foodt);
             this.gbx_new.Controls.Add(this.txt_description);
-            this.gbx_new.Location = new System.Drawing.Point(310, 1);
+            this.gbx_new.Location = new System.Drawing.Point(250, 50);
             this.gbx_new.Name = "gbx_new";
-            this.gbx_new.Size = new System.Drawing.Size(388, 819);
+            this.gbx_new.Size = new System.Drawing.Size(580, 997);
             this.gbx_new.TabIndex = 10;
             this.gbx_new.TabStop = false;
             this.gbx_new.Text = "New Meal";
@@ -305,9 +311,9 @@
             this.btn_cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_cancel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btn_cancel.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.Location = new System.Drawing.Point(3, 680);
+            this.btn_cancel.Location = new System.Drawing.Point(3, 858);
             this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(382, 68);
+            this.btn_cancel.Size = new System.Drawing.Size(574, 68);
             this.btn_cancel.TabIndex = 7;
             this.btn_cancel.Text = "Cancel";
             this.btn_cancel.UseVisualStyleBackColor = true;
@@ -318,9 +324,9 @@
             this.btn_confirmfood.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_confirmfood.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btn_confirmfood.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_confirmfood.Location = new System.Drawing.Point(3, 748);
+            this.btn_confirmfood.Location = new System.Drawing.Point(3, 926);
             this.btn_confirmfood.Name = "btn_confirmfood";
-            this.btn_confirmfood.Size = new System.Drawing.Size(382, 68);
+            this.btn_confirmfood.Size = new System.Drawing.Size(574, 68);
             this.btn_confirmfood.TabIndex = 6;
             this.btn_confirmfood.Text = "Confirm";
             this.btn_confirmfood.UseVisualStyleBackColor = true;
@@ -331,14 +337,14 @@
             this.num_carbohydrates.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.num_carbohydrates.DecimalPlaces = 2;
             this.num_carbohydrates.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.num_carbohydrates.Location = new System.Drawing.Point(163, 272);
+            this.num_carbohydrates.Location = new System.Drawing.Point(355, 361);
             this.num_carbohydrates.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.num_carbohydrates.Name = "num_carbohydrates";
-            this.num_carbohydrates.Size = new System.Drawing.Size(169, 108);
+            this.num_carbohydrates.Size = new System.Drawing.Size(169, 70);
             this.num_carbohydrates.TabIndex = 5;
             // 
             // lbl_carbonhydrate
@@ -346,9 +352,9 @@
             this.lbl_carbonhydrate.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_carbonhydrate.AutoSize = true;
             this.lbl_carbonhydrate.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_carbonhydrate.Location = new System.Drawing.Point(53, 279);
+            this.lbl_carbonhydrate.Location = new System.Drawing.Point(53, 368);
             this.lbl_carbonhydrate.Name = "lbl_carbonhydrate";
-            this.lbl_carbonhydrate.Size = new System.Drawing.Size(451, 100);
+            this.lbl_carbonhydrate.Size = new System.Drawing.Size(283, 64);
             this.lbl_carbonhydrate.TabIndex = 4;
             this.lbl_carbonhydrate.Text = "carbohydrates:";
             // 
@@ -357,9 +363,9 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(53, 191);
+            this.label1.Location = new System.Drawing.Point(53, 280);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 100);
+            this.label1.Size = new System.Drawing.Size(63, 64);
             this.label1.TabIndex = 3;
             this.label1.Text = "kj:";
             // 
@@ -368,14 +374,14 @@
             this.num_kj.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.num_kj.DecimalPlaces = 2;
             this.num_kj.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.num_kj.Location = new System.Drawing.Point(163, 184);
+            this.num_kj.Location = new System.Drawing.Point(355, 273);
             this.num_kj.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.num_kj.Name = "num_kj";
-            this.num_kj.Size = new System.Drawing.Size(169, 108);
+            this.num_kj.Size = new System.Drawing.Size(169, 70);
             this.num_kj.TabIndex = 2;
             // 
             // lbl_foodt
@@ -383,9 +389,9 @@
             this.lbl_foodt.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_foodt.AutoSize = true;
             this.lbl_foodt.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_foodt.Location = new System.Drawing.Point(53, 104);
+            this.lbl_foodt.Location = new System.Drawing.Point(53, 193);
             this.lbl_foodt.Name = "lbl_foodt";
-            this.lbl_foodt.Size = new System.Drawing.Size(514, 100);
+            this.lbl_foodt.Size = new System.Drawing.Size(320, 64);
             this.lbl_foodt.TabIndex = 1;
             this.lbl_foodt.Text = "description name:";
             // 
@@ -393,28 +399,61 @@
             // 
             this.txt_description.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txt_description.Font = new System.Drawing.Font("Papyrus", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_description.Location = new System.Drawing.Point(163, 104);
+            this.txt_description.Location = new System.Drawing.Point(355, 193);
             this.txt_description.Name = "txt_description";
-            this.txt_description.Size = new System.Drawing.Size(169, 108);
+            this.txt_description.Size = new System.Drawing.Size(169, 70);
             this.txt_description.TabIndex = 0;
+            // 
+            // gbx_meallist
+            // 
+            this.gbx_meallist.Controls.Add(this.btn_reg);
+            this.gbx_meallist.Controls.Add(this.lbx_meals);
+            this.gbx_meallist.Location = new System.Drawing.Point(155, 147);
+            this.gbx_meallist.Name = "gbx_meallist";
+            this.gbx_meallist.Size = new System.Drawing.Size(929, 1071);
+            this.gbx_meallist.TabIndex = 12;
+            this.gbx_meallist.TabStop = false;
+            this.gbx_meallist.Text = "Meals";
+            this.gbx_meallist.Visible = false;
+            // 
+            // btn_reg
+            // 
+            this.btn_reg.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_reg.Location = new System.Drawing.Point(277, 597);
+            this.btn_reg.Name = "btn_reg";
+            this.btn_reg.Size = new System.Drawing.Size(450, 80);
+            this.btn_reg.TabIndex = 1;
+            this.btn_reg.Text = "Register new meal";
+            this.btn_reg.UseVisualStyleBackColor = true;
+            // 
+            // lbx_meals
+            // 
+            this.lbx_meals.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbx_meals.FormattingEnabled = true;
+            this.lbx_meals.ItemHeight = 27;
+            this.lbx_meals.Location = new System.Drawing.Point(22, 59);
+            this.lbx_meals.Name = "lbx_meals";
+            this.lbx_meals.Size = new System.Drawing.Size(907, 517);
+            this.lbx_meals.TabIndex = 0;
             // 
             // frm_main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 44F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(961, 891);
-            this.Controls.Add(this.gbx_profile);
-            this.Controls.Add(this.gbx_new);
-            this.Controls.Add(this.btn_menu);
             this.Controls.Add(this.pbx_logo);
-            this.Controls.Add(this.btn_mahlzeit);
-            this.Controls.Add(this.btn_profil);
+            this.Controls.Add(this.gbx_profile);
             this.Controls.Add(this.btn_anywhere);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btn_mahlzeit);
+            this.Controls.Add(this.btn_profil);
+            this.Controls.Add(this.btn_menu);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -436,6 +475,7 @@
             this.gbx_new.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_carbohydrates)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_kj)).EndInit();
+            this.gbx_meallist.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -471,6 +511,9 @@
         private System.Windows.Forms.TextBox txt_description;
         private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.Button btn_confirmfood;
+        private System.Windows.Forms.GroupBox gbx_meallist;
+        private System.Windows.Forms.Button btn_reg;
+        private System.Windows.Forms.ListBox lbx_meals;
     }
 }
 

@@ -20,7 +20,7 @@ namespace SaveVita
         {
             MySqlConnection dbConn = new MySqlConnection(connectionString);
 
-            string query = string.Format("INSERT INTO `tbl_userdaten`(`Vorname`, `Nachname`, `Geschlecht`, `EMail`, `Geburtsdatum`, `age`, `Registrierungsdatum`) VALUES (@vorname,@nachname,@geschlecht,@email,@geburtsdatum,@age,@regdatum)");//('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}')", User.Vorname, User.Nachname, User.Geschlecht, User.Email, User.Gebdat, User.Alter, User.Registrierungsdatum);
+            string query = string.Format("INSERT INTO `tbl_userdaten`(`Vorname`, `Nachname`, `Geschlecht`, `EMail`, `Geburtsdatum`, `age`, `Registrierungsdatum`, `Gewicht`, `Height`) VALUES (@vorname,@nachname,@geschlecht,@email,@geburtsdatum,@age,@regdatum,@weight,@height)");//('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}')", User.Vorname, User.Nachname, User.Geschlecht, User.Email, User.Gebdat, User.Alter, User.Registrierungsdatum);
 
             MySqlCommand commandDatabase = new MySqlCommand(query, dbConn);
             commandDatabase.Parameters.Add("@vorname", MySqlDbType.String).Value = User.Vorname;
@@ -31,6 +31,9 @@ namespace SaveVita
             commandDatabase.Parameters.Add("@age", MySqlDbType.Int64).Value = User.Alter;
             commandDatabase.Parameters.Add("@regdatum", MySqlDbType.DateTime).Value = User.Registrierungsdatum.Date;
             commandDatabase.Parameters.Add("@id", MySqlDbType.Int32).Value = User.ID;
+            commandDatabase.Parameters.Add("@weight", MySqlDbType.Decimal).Value = User.Weight;
+            commandDatabase.Parameters.Add("@height", MySqlDbType.Int64).Value = User.Height;
+
 
 
             commandDatabase.CommandTimeout = 500;
@@ -48,11 +51,11 @@ namespace SaveVita
                 MessageBox.Show("Fehler bei der Datenbankverbindung!");
             }
         }
-        public static void InsertData_N(cls_naehrwerte Nährwerte)
+        public static void InsertData_N(cls_naehrwerte Nährwerte, cls_User User)
         {
             MySqlConnection dbConn = new MySqlConnection(connectionString);
 
-            string query = string.Format("INSERT INTO tbl_ernährungswerte (produktbezeichnung, kj, kcal, fett, kohlenhydrate, ballasstoffe, eiweiß, salz) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')", Nährwerte.Produktbezeichnung, Nährwerte.Kj, Nährwerte.Kcal, Nährwerte.Fett, Nährwerte.Kohlenhydrate, Nährwerte.Ballaststoffe, Nährwerte.Eiweiß, Nährwerte.Salz);
+            string query = string.Format("INSERT INTO tbl_naehrwerte (uid, produktbezeichnung, kj, kcal, fett, kohlenhydrate, ballasstoffe, eiweiß, salz) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')", User.ID, Nährwerte.Produktbezeichnung, Nährwerte.Kj, Nährwerte.Kcal, Nährwerte.Fett, Nährwerte.Kohlenhydrate, Nährwerte.Ballaststoffe, Nährwerte.Eiweiß, Nährwerte.Salz);
             MySqlCommand commandDatabase = new MySqlCommand(query, dbConn);
 
             commandDatabase.CommandTimeout = 30;
@@ -139,13 +142,25 @@ namespace SaveVita
                 MessageBox.Show("Fehler bei der Datenbankverbindung!");
             }
         }
-        
-        
+
+        //////////public static void NewMeal(cls_naehrwerte naehrwerte)
+        //////////{
+        //////////    MySqlConnection dbConn = new MySqlConnection(connectionString);
+
+        //////////    string query = string.Format("INSERT INTO tbl_naehrwerte (kj, kcal, fett, kohlenhydrate, ballasstoffe, eiweiß, salz)");
+
+        //////////    MySqlCommand commandDatabase = new MySqlCommand(query, dbConn);
+
+        //////////    commandDatabase.CommandTimeout = 30;
+        //////////}
+
+
+
         public static void Analyze(cls_naehrwerte naehrwerte)
         {
             MySqlConnection dbConn = new MySqlConnection(connectionString);
 
-            string query = string.Format("SELECT kj, kcal, fett, kohlenhydrate, ballasstoffe, eiweiß, salz FROM tbl_ernaerungswerte WHERE id=@id");
+            string query = string.Format("SELECT kj, kcal, fett, kohlenhydrate, ballasstoffe, eiweiß, salz FROM tbl_ernaerungswerte WHERE uid=@id");
 
             MySqlCommand commandDatabase = new MySqlCommand(query, dbConn);
 

@@ -16,6 +16,8 @@ namespace SaveVita
         DateTime m_gebdat;
         int m_alter;
         DateTime m_registrierungsdatum;
+        decimal m_weight;
+        int m_height;
 
         public int ID { get => m_id; set => m_id = value; }
         public string Vorname { get => m_vorname; set => m_vorname = value; }
@@ -25,6 +27,8 @@ namespace SaveVita
         public DateTime Gebdat { get => m_gebdat; set => m_gebdat = value; }
         public int Alter { get => m_alter; set => m_alter = value; }
         public DateTime Registrierungsdatum { get => m_registrierungsdatum; set => m_registrierungsdatum = value; }
+        public decimal Weight { get => m_weight; set => m_weight = value; }
+        public int Height { get => m_height; set => m_height = value; }
 
         //Konstruktoren
         //public cls_User(int id, string vorname, string nachname, string geschlecht, string email, DateTime gebdat, int alter, DateTime registrierungsdatum)
@@ -38,7 +42,7 @@ namespace SaveVita
         //    m_alter = alter;
         //    m_registrierungsdatum = registrierungsdatum;
         //}
-        public cls_User(string vorname, string nachname, string geschlecht, string email, DateTime gebdat, int alter, DateTime registrierungsdatum)
+        public cls_User(string vorname, string nachname, string geschlecht, string email, DateTime gebdat, int alter, DateTime registrierungsdatum, decimal weight, int height)
         {
             m_vorname = vorname;
             m_nachname = nachname;
@@ -47,6 +51,8 @@ namespace SaveVita
             m_gebdat = gebdat;
             m_alter = alter;
             m_registrierungsdatum = registrierungsdatum;
+            Weight = weight;
+            Height = height;
         }
         public cls_User(int id)
         {

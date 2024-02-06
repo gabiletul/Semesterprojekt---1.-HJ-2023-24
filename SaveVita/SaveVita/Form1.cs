@@ -51,9 +51,9 @@ namespace SaveVita
                         int alter = User.Alter;
                         lbl_age.Text = Convert.ToString(alter);
                         lbl_name.Text = Convert.ToString(User.Vorname + " " + User.Nachname);
-                        //lbl_height.Text = Convert.ToString(User.Groeße);
-                        //lbl_weight.Text = Convert.ToString(User.Gewicht);
-                        if(User.Geschlecht == "f")
+                        lbl_height.Text = Convert.ToString(User.Height);
+                        lbl_weight.Text = Convert.ToString(User.Weight);
+                        if (User.Geschlecht == "f")
                         {
                             pbx_pp.Image = Properties.Resources.umriss_frau;
                         }
@@ -169,6 +169,7 @@ namespace SaveVita
             pbx_logo.Show();
             gbx_profile.Hide();
             gbx_new.Hide();
+            gbx_meallist.Hide();
         }
 
         private void btn_profil_Click(object sender, EventArgs e)
@@ -191,7 +192,8 @@ namespace SaveVita
             btn_mahlzeit.Visible = false;
             btn_profil.Visible = false;
             pbx_logo.Visible = false;
-            gbx_new.Show();
+            gbx_meallist.Show();
+            btn_menu.Visible = true;
         }
 
         private void gbx_new_Enter(object sender, EventArgs e)

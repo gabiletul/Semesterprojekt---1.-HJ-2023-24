@@ -42,7 +42,7 @@ namespace SaveVita
                 geschlecht = "f";
             }
             int age = Convert.ToInt32(DateTime.Now.Year - dtp_gebdat.Value.Year);
-            cls_User User = new cls_User(txt_vorname.Text, txt_nachname.Text, geschlecht, txt_email.Text, dtp_gebdat.Value, age, DateTime.Now);
+            cls_User User = new cls_User(txt_vorname.Text, txt_nachname.Text, geschlecht, txt_email.Text, dtp_gebdat.Value, age, DateTime.Now, num_weight.Value, Convert.ToInt32(num_height.Value));
             cls_DataProv.InsertData_U(User);
             
                 if (cbx_staylogged.Checked)
@@ -143,7 +143,7 @@ namespace SaveVita
             }
                 try
                 {
-                    
+                 
                     StreamWriter sw = new StreamWriter("localid.txt");
 
                     cls_DataProv.Select_ID(User);
