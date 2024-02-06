@@ -48,8 +48,9 @@ namespace SaveVita
                         
                         cls_DataProv.Select_U(User);
 
-                        lbl_age = Convert.ToString(User.Alter);
-                        lbl_name = Convert.ToString(User.Vorname + " " + User.Nachname);
+                        int alter = User.Alter;
+                        //lbl_age = alter;
+                        //lbl_name = Convert.ToString(User.Vorname + " " + User.Nachname);
                         //lbl_height = Convert.ToString(User.Groeße)
                         //lbl_weight = Convert.ToString(User.Gewicht)
 

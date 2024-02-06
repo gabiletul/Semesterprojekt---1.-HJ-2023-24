@@ -30,8 +30,10 @@ namespace SaveVita
             commandDatabase.Parameters.Add("@geburtsdatum", MySqlDbType.DateTime).Value = User.Gebdat.Date;
             commandDatabase.Parameters.Add("@age", MySqlDbType.Int64).Value = User.Alter;
             commandDatabase.Parameters.Add("@regdatum", MySqlDbType.DateTime).Value = User.Registrierungsdatum.Date;
-            
-            //commandDatabase.CommandTimeout = 500;
+            commandDatabase.Parameters.Add("@id", MySqlDbType.Int32).Value = User.ID;
+
+
+            commandDatabase.CommandTimeout = 500;
 
             try
             {
@@ -108,7 +110,8 @@ namespace SaveVita
             string query = string.Format("SELECT `Vorname`, `Nachname`, `Geschlecht`, `EMail`, `Geburtsdatum`, `age`, `Registrierungsdatum` FROM `tbl_userdaten` WHERE id = @id");
 
             MySqlCommand commandDatabase = new MySqlCommand(query, dbConn);
-            commandDatabase.Parameters.Add("@vorname", MySqlDbType.Int32).Value = User.ID;     
+            //commandDatabase.Parameters.Add("@vorname", MySqlDbType.Int32).Value = User.ID;
+
             commandDatabase.CommandTimeout = 30;
 
             try
@@ -134,6 +137,16 @@ namespace SaveVita
             {
                 MessageBox.Show("Fehler bei der Datenbankverbindung!");
             }
+        }
+        public static void Analyze(cls_naehrwerte naehrwerte)
+        {
+            MySqlConnection dbConn = new MySqlConnection(connectionString);
+
+            string query = string.Format("SELECT kj, kcal, fett, kohlenhydrate, ballasstoffe, eiweiß, salz FROM tbl_ernaerungswerte WHERE id=@id");
+
+            MySqlCommand commandDatabase = new MySqlCommand(query, dbConn);
+
+            commandDatabase.CommandTimeout = 30;
         }
     }
 }
