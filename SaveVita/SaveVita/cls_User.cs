@@ -52,5 +52,9 @@ namespace SaveVita
         {
             m_id = id;
         }
+        public cls_User(string email)
+        {
+           m_email=email;
+        }
     }
 }

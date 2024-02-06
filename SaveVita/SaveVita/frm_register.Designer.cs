@@ -49,9 +49,11 @@
             this.txt_passwordreg = new System.Windows.Forms.TextBox();
             this.gbx_login = new System.Windows.Forms.GroupBox();
             this.btn_back = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_passwordlog = new System.Windows.Forms.TextBox();
+            this.txt_emaillog = new System.Windows.Forms.TextBox();
             this.btn_login = new System.Windows.Forms.Button();
+            this.cbx_staylogged = new System.Windows.Forms.CheckBox();
+            this.cbx_stayloggedr = new System.Windows.Forms.CheckBox();
             this.gbx_register.SuspendLayout();
             this.gbx_login.SuspendLayout();
             this.SuspendLayout();
@@ -61,7 +63,7 @@
             this.btn_register.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_register.Font = new System.Drawing.Font("Castellar", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_register.ForeColor = System.Drawing.Color.Olive;
-            this.btn_register.Location = new System.Drawing.Point(349, 424);
+            this.btn_register.Location = new System.Drawing.Point(347, 433);
             this.btn_register.Margin = new System.Windows.Forms.Padding(6);
             this.btn_register.Name = "btn_register";
             this.btn_register.Size = new System.Drawing.Size(249, 77);
@@ -75,7 +77,7 @@
             this.btn_cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btn_cancel.Font = new System.Drawing.Font("Castellar", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancel.ForeColor = System.Drawing.Color.Olive;
-            this.btn_cancel.Location = new System.Drawing.Point(69, 424);
+            this.btn_cancel.Location = new System.Drawing.Point(69, 433);
             this.btn_cancel.Margin = new System.Windows.Forms.Padding(6);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(231, 77);
@@ -209,7 +211,7 @@
             // 
             // btn_loginfrm
             // 
-            this.btn_loginfrm.Location = new System.Drawing.Point(145, 522);
+            this.btn_loginfrm.Location = new System.Drawing.Point(145, 531);
             this.btn_loginfrm.Margin = new System.Windows.Forms.Padding(6);
             this.btn_loginfrm.Name = "btn_loginfrm";
             this.btn_loginfrm.Size = new System.Drawing.Size(365, 33);
@@ -220,6 +222,7 @@
             // 
             // gbx_register
             // 
+            this.gbx_register.Controls.Add(this.cbx_stayloggedr);
             this.gbx_register.Controls.Add(this.lbl_passwordconf);
             this.gbx_register.Controls.Add(this.lbl_password);
             this.gbx_register.Controls.Add(this.txt_passwordconf);
@@ -240,7 +243,7 @@
             this.gbx_register.Controls.Add(this.btn_register);
             this.gbx_register.Location = new System.Drawing.Point(22, 12);
             this.gbx_register.Name = "gbx_register";
-            this.gbx_register.Size = new System.Drawing.Size(643, 555);
+            this.gbx_register.Size = new System.Drawing.Size(643, 593);
             this.gbx_register.TabIndex = 16;
             this.gbx_register.TabStop = false;
             this.gbx_register.Text = "Register";
@@ -286,9 +289,10 @@
             // 
             // gbx_login
             // 
+            this.gbx_login.Controls.Add(this.cbx_staylogged);
             this.gbx_login.Controls.Add(this.btn_back);
-            this.gbx_login.Controls.Add(this.textBox2);
-            this.gbx_login.Controls.Add(this.textBox1);
+            this.gbx_login.Controls.Add(this.txt_passwordlog);
+            this.gbx_login.Controls.Add(this.txt_emaillog);
             this.gbx_login.Controls.Add(this.btn_login);
             this.gbx_login.Location = new System.Drawing.Point(22, 12);
             this.gbx_login.Name = "gbx_login";
@@ -296,6 +300,7 @@
             this.gbx_login.TabIndex = 17;
             this.gbx_login.TabStop = false;
             this.gbx_login.Text = "Login";
+            this.gbx_login.Enter += new System.EventHandler(this.gbx_login_Enter);
             // 
             // btn_back
             // 
@@ -309,23 +314,23 @@
             this.btn_back.UseVisualStyleBackColor = true;
             this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
-            // textBox2
+            // txt_passwordlog
             // 
-            this.textBox2.Location = new System.Drawing.Point(136, 285);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(359, 69);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "Password";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_passwordlog.Location = new System.Drawing.Point(136, 285);
+            this.txt_passwordlog.Name = "txt_passwordlog";
+            this.txt_passwordlog.Size = new System.Drawing.Size(359, 69);
+            this.txt_passwordlog.TabIndex = 2;
+            this.txt_passwordlog.Text = "Password";
+            this.txt_passwordlog.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox1
+            // txt_emaillog
             // 
-            this.textBox1.Location = new System.Drawing.Point(136, 216);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(359, 69);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "E-Mail";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_emaillog.Location = new System.Drawing.Point(136, 216);
+            this.txt_emaillog.Name = "txt_emaillog";
+            this.txt_emaillog.Size = new System.Drawing.Size(359, 69);
+            this.txt_emaillog.TabIndex = 1;
+            this.txt_emaillog.Text = "E-Mail";
+            this.txt_emaillog.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_login
             // 
@@ -338,14 +343,39 @@
             this.btn_login.TabIndex = 0;
             this.btn_login.Text = "Login";
             this.btn_login.UseVisualStyleBackColor = true;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
+            // 
+            // cbx_staylogged
+            // 
+            this.cbx_staylogged.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbx_staylogged.AutoSize = true;
+            this.cbx_staylogged.Location = new System.Drawing.Point(200, 348);
+            this.cbx_staylogged.Name = "cbx_staylogged";
+            this.cbx_staylogged.Size = new System.Drawing.Size(310, 54);
+            this.cbx_staylogged.TabIndex = 4;
+            this.cbx_staylogged.Text = "Stay logged in";
+            this.cbx_staylogged.UseVisualStyleBackColor = true;
+            // 
+            // cbx_stayloggedr
+            // 
+            this.cbx_stayloggedr.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbx_stayloggedr.AutoSize = true;
+            this.cbx_stayloggedr.Location = new System.Drawing.Point(212, 405);
+            this.cbx_stayloggedr.Name = "cbx_stayloggedr";
+            this.cbx_stayloggedr.Size = new System.Drawing.Size(310, 54);
+            this.cbx_stayloggedr.TabIndex = 20;
+            this.cbx_stayloggedr.Text = "Stay logged in";
+            this.cbx_stayloggedr.UseVisualStyleBackColor = true;
             // 
             // frm_register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(22F, 50F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(673, 575);
-            this.Controls.Add(this.gbx_register);
+            this.ClientSize = new System.Drawing.Size(673, 617);
             this.Controls.Add(this.gbx_login);
+            this.Controls.Add(this.gbx_register);
             this.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frm_register";
@@ -378,12 +408,14 @@
         private System.Windows.Forms.GroupBox gbx_register;
         private System.Windows.Forms.GroupBox gbx_login;
         private System.Windows.Forms.Button btn_back;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_passwordlog;
+        private System.Windows.Forms.TextBox txt_emaillog;
         private System.Windows.Forms.Button btn_login;
         private System.Windows.Forms.Label lbl_passwordconf;
         private System.Windows.Forms.Label lbl_password;
         private System.Windows.Forms.TextBox txt_passwordconf;
         private System.Windows.Forms.TextBox txt_passwordreg;
+        private System.Windows.Forms.CheckBox cbx_staylogged;
+        private System.Windows.Forms.CheckBox cbx_stayloggedr;
     }
 }

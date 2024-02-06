@@ -61,8 +61,23 @@ namespace SaveVita
 
                     }
                 }
-                //close the file
+               
                 sr.Close();
+
+                StreamReader tr = new StreamReader("tempid.txt");
+                
+                string tline = tr.ReadLine();
+                
+                {
+                    
+                    if (tline == null)
+                    {
+                        File.WriteAllText("localid.txt", String.Empty);
+
+                    }
+                }
+                
+                tr.Close();
                 
             }
             catch (Exception ex)
@@ -102,11 +117,11 @@ namespace SaveVita
         {
             try
             {
-
+                
             
-            StreamReader sr = new StreamReader("localid.txt");
+            //StreamReader sr = new StreamReader("localid.txt");
             //Read the first line of text
-            line = sr.ReadLine();
+            //line = sr.ReadLine();
                 //if ()Account bereits existiert)
                 if (line != null)
                 {
@@ -135,8 +150,8 @@ namespace SaveVita
 
                     if (register.DialogResult == DialogResult.OK)
                     {
-
-                    } 
+                        Application.Restart();
+                        } 
                 }
                 
             }

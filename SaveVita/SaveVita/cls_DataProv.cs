@@ -75,7 +75,7 @@ namespace SaveVita
 
             MySqlConnection dbConn = new MySqlConnection(connectionString);
 
-            string query = string.Format("SELECT `id` FROM `tbl_userdaten` WHERE Vorname = @vorname AND Nachname = @nachname AND EMail = @email");
+            string query = string.Format("SELECT `id` FROM `tbl_userdaten` WHERE EMail = @email");
 
             MySqlCommand commandDatabase = new MySqlCommand(query, dbConn);
             commandDatabase.Parameters.Add("@vorname", MySqlDbType.String).Value = User.Vorname;
@@ -108,9 +108,9 @@ namespace SaveVita
             MySqlConnection dbConn = new MySqlConnection(connectionString);
 
             string query = string.Format("SELECT `Vorname`, `Nachname`, `Geschlecht`, `EMail`, `Geburtsdatum`, `age`, `Registrierungsdatum` FROM `tbl_userdaten` WHERE id = @id");
-            
+
             MySqlCommand commandDatabase = new MySqlCommand(query, dbConn);
-            
+
             commandDatabase.Parameters.Add("@id", MySqlDbType.Int32).Value = User.ID;
 
             commandDatabase.CommandTimeout = 30;
@@ -139,6 +139,8 @@ namespace SaveVita
                 MessageBox.Show("Fehler bei der Datenbankverbindung!");
             }
         }
+        
+        
         public static void Analyze(cls_naehrwerte naehrwerte)
         {
             MySqlConnection dbConn = new MySqlConnection(connectionString);

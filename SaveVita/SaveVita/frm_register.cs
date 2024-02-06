@@ -44,33 +44,42 @@ namespace SaveVita
             int age = Convert.ToInt32(DateTime.Now.Year - dtp_gebdat.Value.Year);
             cls_User User = new cls_User(txt_vorname.Text, txt_nachname.Text, geschlecht, txt_email.Text, dtp_gebdat.Value, age, DateTime.Now);
             cls_DataProv.InsertData_U(User);
+            
+                if (cbx_staylogged.Checked)
+                {
+                    StreamWriter sw = new StreamWriter("tempid.txt");
 
-            try
-            {
-                //Open the File
-                StreamWriter sw = new StreamWriter("localid.txt");
-
-                //Write out the numbers 1 to 10 on the same line.
-                cls_DataProv.Select_ID(User);
-                if (User.ID != null) { 
-                    sw.Write(User.ID);
-                
-
-                //close the file
-                sw.Close();
-                    
-                    
-                    
+                    sw.Write("1");
+                    sw.Close();
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Exception: " + ex.Message);
-            }
-            finally
-            {
-                
-            }
+                try
+                {
+                    //Open the File
+                    StreamWriter sw = new StreamWriter("localid.txt");
+
+                    //Write out the numbers 1 to 10 on the same line.
+                    cls_DataProv.Select_ID(User);
+                    if (User.ID != null)
+                    {
+                        sw.Write(User.ID);
+
+
+                        //close the file
+                        sw.Close();
+
+
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Exception: " + ex.Message);
+                }
+                finally
+                {
+
+                }
+            
         }
 
         private void txt_email_TextChanged(object sender, EventArgs e)
@@ -115,5 +124,48 @@ namespace SaveVita
         {
             
         }
+
+        private void gbx_login_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+            cls_User User = new cls_User(txt_emaillog.Text);
+
+            if (cbx_staylogged.Checked)
+            {
+                StreamWriter sw = new StreamWriter("tempid.txt");
+
+                    sw.Write("1");
+                    sw.Close();
+            }
+                try
+                {
+                    
+                    StreamWriter sw = new StreamWriter("localid.txt");
+
+                    cls_DataProv.Select_ID(User);
+                    cls_User User2 = new cls_User(User.ID);
+                    cls_DataProv.Select_U(User2);
+                    if (User.ID != null)
+                    {
+                        sw.Write(User.ID);
+
+
+                        //close the file
+                        sw.Close();
+
+
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Exception: " + ex.Message);
+                }
+            
+            }
     }
 }
