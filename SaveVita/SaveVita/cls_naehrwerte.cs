@@ -9,7 +9,7 @@ namespace SaveVita
     internal class cls_naehrwerte
     {
         int m_id;
-        int m_produktbezeichnung;
+        string m_produktbezeichnung;
         double m_kj;
         double m_kcal;
         double m_fett;
@@ -25,10 +25,10 @@ namespace SaveVita
         public double Eiweiß { get => m_eiweiß; set => m_eiweiß = value; }
         public double Salz { get => m_salz; set => m_salz = value; }
         public int Id { get => m_id; set => m_id = value; }
-        public int Produktbezeichnung { get => m_produktbezeichnung; set => m_produktbezeichnung = value; }
+        public string Produktbezeichnung { get => m_produktbezeichnung; set => m_produktbezeichnung = value; }
 
         //Konstruktor
-        public cls_naehrwerte(int id, int produktbezeichnung, double kj, double kcal, double fett, double kohlenhydrate, double ballasstoffe, double eiweiß, double salz)
+        public cls_naehrwerte(string produktbezeichnung, double kj, double kcal, double fett, double kohlenhydrate, double ballasstoffe, double eiweiß, double salz)
         {
             m_produktbezeichnung = produktbezeichnung;
             m_kj = kj;
@@ -38,6 +38,20 @@ namespace SaveVita
             m_ballaststoffe = ballasstoffe;
             m_eiweiß = eiweiß;
             m_salz = salz;
+        }
+
+        public cls_naehrwerte(int id)
+        {
+            m_id = id;
+        }
+
+
+        public string Anzeige
+        {
+            get
+            {
+                return string.Format("{0}: {1} kj/ {2} kcal/ {3} g fat/ {4} g carbohydrates/ {5} g fibre/ {6} g proteins/ {7} g salt", m_produktbezeichnung, m_kj, m_kcal, m_fett, m_kohlenhydrate, m_ballaststoffe, m_eiweiß, m_salz);
+            }
         }
     }
 }

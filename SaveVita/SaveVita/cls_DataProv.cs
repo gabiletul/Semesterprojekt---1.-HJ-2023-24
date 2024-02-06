@@ -51,12 +51,22 @@ namespace SaveVita
                 MessageBox.Show("Fehler bei der Datenbankverbindung!");
             }
         }
-        public static void InsertData_N(cls_naehrwerte Nährwerte, cls_User User)
+        public static void InsertData_N(cls_naehrwerte Nährwerte, int zwischenid)
         {
             MySqlConnection dbConn = new MySqlConnection(connectionString);
 
-            string query = string.Format("INSERT INTO tbl_naehrwerte (uid, produktbezeichnung, kj, kcal, fett, kohlenhydrate, ballasstoffe, eiweiß, salz) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')", User.ID, Nährwerte.Produktbezeichnung, Nährwerte.Kj, Nährwerte.Kcal, Nährwerte.Fett, Nährwerte.Kohlenhydrate, Nährwerte.Ballaststoffe, Nährwerte.Eiweiß, Nährwerte.Salz);
+            string query = string.Format("INSERT INTO `tbl_naehrwerte` (`uid`, `produktbezeichnung`, `kj`, `kcal`, `fett`, `kohlenhydrate`, `ballasstoffe`, `eiweiß`, `salz`) VALUES (@uid, @produktbezeichnung, @kj, @kcal, @fett, @kohlenhydrate, @ballaststoffe, @eiweiß, @salz)");//, User.ID, Nährwerte.Produktbezeichnung, Nährwerte.Kj, Nährwerte.Kcal, Nährwerte.Fett, Nährwerte.Kohlenhydrate, Nährwerte.Ballaststoffe, Nährwerte.Eiweiß, Nährwerte.Salz);
             MySqlCommand commandDatabase = new MySqlCommand(query, dbConn);
+            commandDatabase.Parameters.Add("@uid", MySqlDbType.Int32).Value = zwischenid;
+            commandDatabase.Parameters.Add("@produktbezeichnung", MySqlDbType.VarChar).Value = Nährwerte.Produktbezeichnung;
+            commandDatabase.Parameters.Add("@kj", MySqlDbType.Int32).Value = Nährwerte.Kj;
+            commandDatabase.Parameters.Add("@kcal", MySqlDbType.Int32).Value = Nährwerte.Kcal;
+            commandDatabase.Parameters.Add("@fett", MySqlDbType.Int32).Value = Nährwerte.Fett;
+            commandDatabase.Parameters.Add("@kohlenhydrate", MySqlDbType.Int32).Value = Nährwerte.Kohlenhydrate;
+            commandDatabase.Parameters.Add("@ballaststoffe", MySqlDbType.Int32).Value = Nährwerte.Ballaststoffe;
+            commandDatabase.Parameters.Add("@eiweiß", MySqlDbType.Int32).Value = Nährwerte.Eiweiß;
+            commandDatabase.Parameters.Add("@salz", MySqlDbType.Int32).Value = Nährwerte.Salz;
+
 
             commandDatabase.CommandTimeout = 30;
 
@@ -156,15 +166,35 @@ namespace SaveVita
 
 
 
-        public static void Analyze(cls_naehrwerte naehrwerte)
+        public static void LoadData(List<cls_naehrwerte> nährwerteliste0, int zwischenid)
         {
             MySqlConnection dbConn = new MySqlConnection(connectionString);
 
-            string query = string.Format("SELECT kj, kcal, fett, kohlenhydrate, ballasstoffe, eiweiß, salz FROM tbl_ernaerungswerte WHERE uid=@id");
+            string query = string.Format("SELECT `produktbezeichnung`, `kj`, `kcal`, `fett`, `kohlenhydrate`, `ballasstoffe`, `eiweiß`, `salz` FROM `tbl_naehrwerte` WHERE uid=@id");
 
             MySqlCommand commandDatabase = new MySqlCommand(query, dbConn);
 
+            commandDatabase.Parameters.Add("@id", MySqlDbType.Int32).Value = zwischenid;
+
             commandDatabase.CommandTimeout = 30;
+
+            try
+            {
+                dbConn.Open(); //Verbindung DB
+
+                MySqlDataReader reader = commandDatabase.ExecuteReader();
+                while (reader.Read())
+                {
+                    cls_naehrwerte NW = new cls_naehrwerte(Convert.ToString(reader[0]), Convert.ToInt32(reader[1]), Convert.ToInt32(reader[2]), Convert.ToInt32(reader[3]), Convert.ToInt32(reader[4]), Convert.ToInt32(reader[5]), Convert.ToInt32(reader[6]), Convert.ToInt32(reader[7]));
+                    nährwerteliste0.Add(NW);
+                }
+                dbConn.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Fehler bei der Datenbankverbindung!");
+            }
+
         }
     }
 }

@@ -18,15 +18,16 @@ namespace SaveVita
         {
 
             InitializeComponent();
+            lbx_funktionier.DisplayMember = "Anzeige";
         }
         string line;
         int localid =0;
+        List<cls_naehrwerte> nährwerteliste = new List<cls_naehrwerte>();
+        
+
         private void Form1_Load(object sender, EventArgs e)
         {
-
-
-            List<cls_naehrwerte> nährwerteliste = new List<cls_naehrwerte>();
-            List<cls_User> userliste = new List<cls_User>();
+            //List<cls_User> userliste = new List<cls_User>();
             DateTime gebdat = DateTime.Now;
             try
             {
@@ -248,18 +249,26 @@ namespace SaveVita
             string decriptionname = txt_description.Text;
             double kj = Convert.ToDouble(num_kj.Value);
             double carbohydrates = Convert.ToDouble(num_carbohydrates.Value);
-            
 
+            Aktualisieren();
         }
 
         private void btn_confirmfood_Click_1(object sender, EventArgs e)
         {
-            gbx_meallist.Hide();
+            gbx_meallist.Show();
+            gbx_new.Hide();
+
+            //cls_User U = new cls_User();
+            cls_naehrwerte NW = new cls_naehrwerte(txt_description.Text, Convert.ToDouble(num_kj.Value), Convert.ToDouble(num_calories.Value), Convert.ToDouble(num_fat.Value), Convert.ToDouble(num_carbohydrates.Value), Convert.ToDouble(num_fibre.Value), Convert.ToDouble(num_proteins.Value), Convert.ToDouble(num_salt.Value));
+            cls_DataProv.InsertData_N(NW, localid);
+
+            Aktualisieren();
         }
 
         private void btn_cancel_Click_1(object sender, EventArgs e)
         {
-            gbx_meallist.Hide();
+            gbx_meallist.Show();
+            gbx_new.Hide();
         }
 
         private void btn_showmeals_Click(object sender, EventArgs e)
@@ -269,6 +278,33 @@ namespace SaveVita
             pbx_logo.Visible = false;
             gbx_meallist.Show();
             btn_menu.Visible = true;
+
+            Aktualisieren();
         }
+
+        private void btn_reg_Click(object sender, EventArgs e)
+        {
+            gbx_new.Show();
+            gbx_meallist.Hide();
+            btn_menu.Hide();
+        }
+
+        //Methode zum Aktualisieren
+        void Aktualisieren()
+        {
+            nährwerteliste.Clear();
+            lbx_funktionier.Items.Clear();
+
+
+            cls_naehrwerte naehrwerte = new cls_naehrwerte(localid);
+            cls_DataProv.LoadData(nährwerteliste, localid);
+
+            //Befüllen
+            foreach (cls_naehrwerte NW in nährwerteliste)
+            {
+                lbx_funktionier.Items.Add(NW);
+            }
+        }
+
     }
 }
