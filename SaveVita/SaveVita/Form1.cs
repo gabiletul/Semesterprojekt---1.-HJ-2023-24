@@ -125,10 +125,11 @@ namespace SaveVita
                 //if ()Account bereits existiert)
                 if (line != null)
                 {
-                    btn_mahlzeit.Show();
+                    btn_showmeals.Show();
                     btn_profil.Show();
                     btn_anywhere.Hide();
                     pbx_logo.Show();
+                    btn_showmeals.Show();
 
                     //cls_User User = new cls_User(localid);
                     //cls_DataProv.Select_U(User);
@@ -163,7 +164,7 @@ namespace SaveVita
 
         private void button1_Click(object sender, EventArgs e)
         {
-            btn_mahlzeit.Show();
+            btn_showmeals.Show();
             btn_profil.Show();
             btn_menu.Hide();
             pbx_logo.Show();
@@ -174,7 +175,7 @@ namespace SaveVita
 
         private void btn_profil_Click(object sender, EventArgs e)
         {
-            btn_mahlzeit.Visible=false;
+            btn_showmeals.Visible=false;
             btn_profil.Visible=false;
             btn_menu.Show();
             pbx_logo.Visible=false;
@@ -189,11 +190,7 @@ namespace SaveVita
 
         private void btn_mahlzeit_Click(object sender, EventArgs e)
         {
-            btn_mahlzeit.Visible = false;
-            btn_profil.Visible = false;
-            pbx_logo.Visible = false;
-            gbx_meallist.Show();
-            btn_menu.Visible = true;
+            
         }
 
         private void gbx_new_Enter(object sender, EventArgs e)
@@ -233,7 +230,7 @@ namespace SaveVita
 
         private void btn_cancel_Click(object sender, EventArgs e)
         {
-            btn_mahlzeit.Show();
+            btn_showmeals.Show();
             btn_profil.Show();
             btn_menu.Hide();
             pbx_logo.Show();
@@ -242,7 +239,7 @@ namespace SaveVita
 
         private void btn_confirmfood_Click(object sender, EventArgs e)
         {
-            btn_mahlzeit.Show();
+            btn_showmeals.Show();
             btn_profil.Show();
             btn_menu.Hide();
             pbx_logo.Show();
@@ -253,6 +250,25 @@ namespace SaveVita
             double carbohydrates = Convert.ToDouble(num_carbohydrates.Value);
             
 
+        }
+
+        private void btn_confirmfood_Click_1(object sender, EventArgs e)
+        {
+            gbx_meallist.Hide();
+        }
+
+        private void btn_cancel_Click_1(object sender, EventArgs e)
+        {
+            gbx_meallist.Hide();
+        }
+
+        private void btn_showmeals_Click(object sender, EventArgs e)
+        {
+            btn_showmeals.Visible = false;
+            btn_profil.Visible = false;
+            pbx_logo.Visible = false;
+            gbx_meallist.Show();
+            btn_menu.Visible = true;
         }
     }
 }
