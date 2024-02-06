@@ -49,10 +49,15 @@ namespace SaveVita
                         cls_DataProv.Select_U(User);
 
                         int alter = User.Alter;
-                        //lbl_age = alter;
-                        //lbl_name = Convert.ToString(User.Vorname + " " + User.Nachname);
-                        //lbl_height = Convert.ToString(User.Groeße)
-                        //lbl_weight = Convert.ToString(User.Gewicht)
+                        lbl_age.Text = Convert.ToString(alter);
+                        lbl_name.Text = Convert.ToString(User.Vorname + " " + User.Nachname);
+                        //lbl_height.Text = Convert.ToString(User.Groeße);
+                        //lbl_weight.Text = Convert.ToString(User.Gewicht);
+                        if(User.Geschlecht == "f")
+                        {
+                            pbx_pp.Image = Properties.Resources.umriss_frau;
+                        }
+                            
 
                     }
                 }
@@ -95,35 +100,49 @@ namespace SaveVita
 
         private void btn_anywhere_Click(object sender, EventArgs e)
         {
-            //if ()Account bereits existiert)
-            if(line != null)
+            try
             {
-                btn_mahlzeit.Show();
-                btn_profil.Show();
-                btn_anywhere.Hide();
-                pbx_logo.Show();
 
-                cls_User User = new cls_User(localid);
-                cls_DataProv.Select_U(User);
-
-                string vorname;
-                string nachname;
-                string gender;
-                string email;
-                DateTime gebdat;
-                int age;
-                DateTime regdat;
-
-                
-            }
-            else if(line == null)
-            {
-                frm_register register = new frm_register();
-                register.ShowDialog();
-                if(register.DialogResult == DialogResult.OK)
+            
+            StreamReader sr = new StreamReader("localid.txt");
+            //Read the first line of text
+            line = sr.ReadLine();
+                //if ()Account bereits existiert)
+                if (line != null)
                 {
+                    btn_mahlzeit.Show();
+                    btn_profil.Show();
+                    btn_anywhere.Hide();
+                    pbx_logo.Show();
+
+                    //cls_User User = new cls_User(localid);
+                    //cls_DataProv.Select_U(User);
+
+                    string vorname;
+                    string nachname;
+                    string gender;
+                    string email;
+                    DateTime gebdat;
+                    int age;
+                    DateTime regdat;
+
 
                 }
+                else if (line == null)
+                {
+                    frm_register register = new frm_register();
+                    register.ShowDialog();
+
+                    if (register.DialogResult == DialogResult.OK)
+                    {
+
+                    } 
+                }
+                
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 

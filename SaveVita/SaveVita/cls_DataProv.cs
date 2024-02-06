@@ -108,9 +108,10 @@ namespace SaveVita
             MySqlConnection dbConn = new MySqlConnection(connectionString);
 
             string query = string.Format("SELECT `Vorname`, `Nachname`, `Geschlecht`, `EMail`, `Geburtsdatum`, `age`, `Registrierungsdatum` FROM `tbl_userdaten` WHERE id = @id");
-
+            
             MySqlCommand commandDatabase = new MySqlCommand(query, dbConn);
-            //commandDatabase.Parameters.Add("@vorname", MySqlDbType.Int32).Value = User.ID;
+            
+            commandDatabase.Parameters.Add("@id", MySqlDbType.Int32).Value = User.ID;
 
             commandDatabase.CommandTimeout = 30;
 

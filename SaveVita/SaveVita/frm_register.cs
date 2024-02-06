@@ -35,6 +35,7 @@ namespace SaveVita
 
         private void btn_register_Click(object sender, EventArgs e)
         {
+            
             string geschlecht = "m";
             if (rb_f.Checked)
             {
@@ -57,12 +58,18 @@ namespace SaveVita
 
                 //close the file
                 sw.Close();
-                MessageBox.Show(Convert.ToString(User.ID));
-                     }
+                    
+                    
+                    
+                }
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Exception: " + ex.Message);
+            }
+            finally
+            {
+                
             }
         }
 
